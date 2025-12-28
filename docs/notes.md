@@ -17,7 +17,7 @@ I use gitbash
 
 ``` bash
 export QHOME=...
-$QHOME/w64/q.exe -8060
+$QHOME/w64/q.exe -p 8060
 ```
 
 # IDE: Visual Studio Code
