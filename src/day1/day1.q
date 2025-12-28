@@ -1,3 +1,4 @@
+// https://adventofcode.com/2025/day/1
 // https://code.kx.com/q/ref/accumulators/
 
 // improvement 1:
@@ -30,5 +31,11 @@ execute: {[state;command]
 
 //count where 0=execute\[50;test]
 //fetch `$"src/day1/input1.txt"
-count where 0=execute\[50;fetch `$"src/day1/input1.txt"]
+// part#1
+//count where 0=execute\[50;fetch `$"src/day1/input1.txt"]
 
+// part#2
+// break down command do discretize state changes
+count where 0=execute\[50;
+    raze {x[0],/:string ("I"$1_x)#enlist 1} each fetch `$"src/day1/input1.txt"
+]
